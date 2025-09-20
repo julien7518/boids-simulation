@@ -116,10 +116,10 @@ def euclidian_distance(first: Boid, second: Boid) -> float:
     )
 
 
-# Made with ChatGPT
-def simulation(numbers_of_boids: int = 200, save: bool = False):
+def simulation(numbers_of_boids: int = 200):
     boids: list[Boid] = [Boid() for _ in range(numbers_of_boids)]
 
+    # Made with ChatGPT
     fig, ax = plt.subplots(figsize=(8, 8))
     ax.set_xlim(0, 800)
     ax.set_ylim(0, 800)
@@ -136,6 +136,7 @@ def simulation(numbers_of_boids: int = 200, save: bool = False):
 
     ani = animation.FuncAnimation(fig, update, frames=200, interval=50, blit=True)
     plt.show()
+    # End of made with ChatGPT
 
     return ani
 
